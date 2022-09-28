@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		147126B828E4366900E681A4 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147126B728E4366900E681A4 /* ContentCollectionViewCell.swift */; };
+		147126BA28E4399400E681A4 /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147126B928E4399400E681A4 /* ContentCollectionViewHeader.swift */; };
 		14FA7C7A28D31CA500C776B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA7C7928D31CA500C776B3 /* AppDelegate.swift */; };
 		14FA7C7C28D31CA500C776B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA7C7B28D31CA500C776B3 /* SceneDelegate.swift */; };
 		14FA7C8328D31CA600C776B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FA7C8228D31CA600C776B3 /* Assets.xcassets */; };
 		14FA7C8628D31CA600C776B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FA7C8428D31CA600C776B3 /* LaunchScreen.storyboard */; };
 		14FA7C8E28D31D7800C776B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA7C8D28D31D7800C776B3 /* HomeViewController.swift */; };
 		14FA7C9128D31FED00C776B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14FA7C9028D31FED00C776B3 /* SnapKit */; };
-		14FA7C9328D31FED00C776B3 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 14FA7C9228D31FED00C776B3 /* SnapKit-Dynamic */; };
 		14FA7C9528D3230400C776B3 /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FA7C9428D3230400C776B3 /* Content.plist */; };
 		14FA7C9728D3233E00C776B3 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA7C9628D3233E00C776B3 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		147126B728E4366900E681A4 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		147126B928E4399400E681A4 /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
 		14FA7C7628D31CA500C776B3 /* NetflixStyleSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixStyleSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FA7C7928D31CA500C776B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FA7C7B28D31CA500C776B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FA7C9128D31FED00C776B3 /* SnapKit in Frameworks */,
-				14FA7C9328D31FED00C776B3 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +66,14 @@
 			children = (
 				14FA7C7928D31CA500C776B3 /* AppDelegate.swift */,
 				14FA7C7B28D31CA500C776B3 /* SceneDelegate.swift */,
+				14FA7C9628D3233E00C776B3 /* Content.swift */,
+				147126B728E4366900E681A4 /* ContentCollectionViewCell.swift */,
 				14FA7C8D28D31D7800C776B3 /* HomeViewController.swift */,
+				147126B928E4399400E681A4 /* ContentCollectionViewHeader.swift */,
 				14FA7C8228D31CA600C776B3 /* Assets.xcassets */,
 				14FA7C8428D31CA600C776B3 /* LaunchScreen.storyboard */,
 				14FA7C8728D31CA600C776B3 /* Info.plist */,
 				14FA7C9428D3230400C776B3 /* Content.plist */,
-				14FA7C9628D3233E00C776B3 /* Content.swift */,
 			);
 			path = NetflixStyleSampleApp;
 			sourceTree = "<group>";
@@ -92,7 +96,6 @@
 			name = NetflixStyleSampleApp;
 			packageProductDependencies = (
 				14FA7C9028D31FED00C776B3 /* SnapKit */,
-				14FA7C9228D31FED00C776B3 /* SnapKit-Dynamic */,
 			);
 			productName = NetflixStyleSampleApp;
 			productReference = 14FA7C7628D31CA500C776B3 /* NetflixStyleSampleApp.app */;
@@ -153,9 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FA7C7A28D31CA500C776B3 /* AppDelegate.swift in Sources */,
+				147126BA28E4399400E681A4 /* ContentCollectionViewHeader.swift in Sources */,
 				14FA7C7C28D31CA500C776B3 /* SceneDelegate.swift in Sources */,
 				14FA7C8E28D31D7800C776B3 /* HomeViewController.swift in Sources */,
 				14FA7C9728D3233E00C776B3 /* Content.swift in Sources */,
+				147126B828E4366900E681A4 /* ContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -277,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -382,11 +387,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14FA7C8F28D31FED00C776B3 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		14FA7C9228D31FED00C776B3 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 14FA7C8F28D31FED00C776B3 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
