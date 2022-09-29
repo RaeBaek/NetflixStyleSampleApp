@@ -8,7 +8,8 @@
 import UIKit
 import SnapKit
 
-class ContentCollectonViewCell: UICollectionViewCell {
+class ContentCollectionViewCell: UICollectionViewCell {
+    
     let imageView = UIImageView()
     
     override func layoutSubviews() {
