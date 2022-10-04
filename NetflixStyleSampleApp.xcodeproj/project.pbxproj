@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		141C02FD28E6A9B500BD4109 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C02FC28E6A9B500BD4109 /* UIButton.swift */; };
+		1459A65128EC2A0E00701EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459A65028EC2A0E00701EC9 /* ContentView.swift */; };
+		1459A65328EC2E1300701EC9 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459A65228EC2E1300701EC9 /* ContentDetailView.swift */; };
 		1470908F28E572AA00365B02 /* ContentCollectionViewRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1470908E28E572AA00365B02 /* ContentCollectionViewRankCell.swift */; };
 		147126B828E4366900E681A4 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147126B728E4366900E681A4 /* ContentCollectionViewCell.swift */; };
 		147126BA28E4399400E681A4 /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147126B928E4399400E681A4 /* ContentCollectionViewHeader.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		141C02FC28E6A9B500BD4109 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		1459A65028EC2A0E00701EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1459A65228EC2E1300701EC9 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		1470908E28E572AA00365B02 /* ContentCollectionViewRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewRankCell.swift; sourceTree = "<group>"; };
 		147126B728E4366900E681A4 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		147126B928E4399400E681A4 /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		1459A65428EC2E3300701EC9 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				1459A65228EC2E1300701EC9 /* ContentDetailView.swift */,
+				1459A65028EC2A0E00701EC9 /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		14FA7C6D28D31CA500C776B3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +118,13 @@
 		14FA7C7828D31CA500C776B3 /* NetflixStyleSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				1459A65428EC2E3300701EC9 /* Content */,
 				141C030128E6A9D600BD4109 /* App */,
 				141C030028E6A9D100BD4109 /* Header */,
 				141C02FE28E6A9BE00BD4109 /* Cell */,
 				141C02FF28E6A9C300BD4109 /* ViewController */,
-				14FA7C9628D3233E00C776B3 /* Content.swift */,
 				141C02FC28E6A9B500BD4109 /* UIButton.swift */,
+				14FA7C9628D3233E00C776B3 /* Content.swift */,
 				14FA7C8228D31CA600C776B3 /* Assets.xcassets */,
 				14FA7C8428D31CA600C776B3 /* LaunchScreen.storyboard */,
 				14FA7C8728D31CA600C776B3 /* Info.plist */,
@@ -197,11 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FA7C7A28D31CA500C776B3 /* AppDelegate.swift in Sources */,
+				1459A65328EC2E1300701EC9 /* ContentDetailView.swift in Sources */,
 				147126BA28E4399400E681A4 /* ContentCollectionViewHeader.swift in Sources */,
 				14FA7C7C28D31CA500C776B3 /* SceneDelegate.swift in Sources */,
 				1470908F28E572AA00365B02 /* ContentCollectionViewRankCell.swift in Sources */,
 				14FA7C9728D3233E00C776B3 /* Content.swift in Sources */,
 				14A62C0228E58546007BC708 /* ContentCollectionViewMainCell.swift in Sources */,
+				1459A65128EC2A0E00701EC9 /* ContentView.swift in Sources */,
 				14ABB90828E4458700E60D59 /* HomeViewController.swift in Sources */,
 				147126B828E4366900E681A4 /* ContentCollectionViewCell.swift in Sources */,
 				141C02FD28E6A9B500BD4109 /* UIButton.swift in Sources */,

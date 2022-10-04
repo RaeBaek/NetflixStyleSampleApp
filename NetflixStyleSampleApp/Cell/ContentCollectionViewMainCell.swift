@@ -72,7 +72,7 @@ class ContentCollectionViewMainCell: UICollectionViewCell {
         plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
         
         infoButton.setTitle("정보", for: .normal)
-        infoButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        infoButton.setImage(UIImage(systemName: "info.circle"), for: .normal)
         infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
         
         playButton.setTitle("▶ 재생", for: .normal)

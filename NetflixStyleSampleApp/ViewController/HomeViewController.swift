@@ -22,7 +22,7 @@ class HomeViewController: UICollectionViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.hidesBarsOnSwipe = true
-      
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "netflix_icon"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
         
@@ -73,7 +73,7 @@ class HomeViewController: UICollectionViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(0.75))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = .init(top: 10, leading: 5, bottom: 0, trailing: 5)
-                                              
+        
         //group
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(200))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
@@ -171,13 +171,13 @@ extension HomeViewController {
     
     // 섹션당 보여질 셀의 개수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            switch section {
-            case 0:
-                return 1
-            default:
-                return contents[section].contentItem.count
-            }
+        switch section {
+        case 0:
+            return 1
+        default:
+            return contents[section].contentItem.count
         }
+    }
     
     //콜렉션뷰 셀 설정
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -225,30 +225,30 @@ extension HomeViewController {
     
     //셀 선택
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sectionName = contents[indexPath.section].sectionName
-        print("TEST: \(sectionName)섹션의 \(indexPath.row + 1)번째 콘텐츠")
-        
+        let isFirstSection = indexPath.section == 0
+        let selectedItem = isFirstSection ? mainItem : contents[indexPath.section].contentItem[indexPath.row]
+        let contentDetailView = ContentDetailView(item: selectedItem)
+        let hostingVC = UIHostingController(rootView: contentDetailView)
+        self.show(hostingVC, sender: nil)
     }
 }
 
 //SwiftUI를 활용한 미리보기
 struct HomeViewController_Previews: PreviewProvider {
     static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let layout = UICollectionViewLayout()
-            let homeViewContoller = HomeViewController(collectionViewLayout: layout)
-            return UINavigationController(rootViewController: homeViewContoller)
-            
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
-        
-        typealias UIViewControllerType = UIViewController
+        HomeViewControllerRepresentable().edgesIgnoringSafeArea(.all)
     }
 }
 
-
+struct HomeViewControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        let layout = UICollectionViewLayout()
+        let homeViewContoller = HomeViewController(collectionViewLayout: layout)
+        return UINavigationController(rootViewController: homeViewContoller)
+        
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+    
+    typealias UIViewControllerType = UIViewController
+}
